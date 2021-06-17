@@ -48,9 +48,8 @@
     <script>
 
 	// Update these variables with YOUR account number and contract address
-	//var myAccountNumber = '0x377Db235c1d00b36B3E76538FC4E59b646b56276';
-	var myAccountNumber = '0x8Fa40463e36f5E616d4a3d5B3f08dA9b73cE0bF7';
-	var myContractAddress = '0xE1eD0186A59105c74DdEF63E7B1cbAB4d79F622b';
+	var myAccountNumber = '0xB9237EfCD08FAf47Af90df80785af6B31B293892';
+	var myContractAddress = '0x1c530fb891Ba9e7AE937108Cf24FCC0cCB4264b4';
 
 	// Create a new web3 reference
 	// web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:7545"));
@@ -62,11 +61,6 @@
 	// Build a reference to the smart contract.
 	var albumContract = new web3.eth.Contract(
 	[ {
-		"inputs": [],
-		"stateMutability": "nonpayable",
-		"type": "constructor"
-	},
-	{
 		"anonymous": false,
 		"inputs": [
 			{
@@ -109,6 +103,57 @@
 		],
 		"name": "errorEvent",
 		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_artist",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_albumTitle",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_tracks",
+				"type": "uint256"
+			}
+		],
+		"name": "setCurrentAlbum",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_artist",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_albumTitle",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_tracks",
+				"type": "uint256"
+			}
+		],
+		"name": "setUsersFavoriteAlbum",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
 	},
 	{
 		"inputs": [],
@@ -190,52 +235,6 @@
 			}
 		],
 		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "_artist",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "_albumTitle",
-				"type": "string"
-			},
-			{
-				"internalType": "uint256",
-				"name": "_tracks",
-				"type": "uint256"
-			}
-		],
-		"name": "setCurrentAlbum",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "_artist",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "_albumTitle",
-				"type": "string"
-			},
-			{
-				"internalType": "uint256",
-				"name": "_tracks",
-				"type": "uint256"
-			}
-		],
-		"name": "setUsersFavoriteAlbum",
-		"outputs": [],
-		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
