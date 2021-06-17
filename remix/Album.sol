@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: CC-By-1.0
 // Creative Commons Attribution 1.0 Generic
 
-// pragma solidity ^0.7.0;
+// changing solidity compiler to 0.8.0 as of lab 7
 pragma solidity ^0.8.0;
 
 
