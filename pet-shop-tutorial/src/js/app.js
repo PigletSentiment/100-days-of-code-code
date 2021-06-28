@@ -25,7 +25,7 @@ App = {
 
   initWeb3: async function() {
     if (window.ethereum) {
-        App.web3Provide = window.ethereum;
+        App.web3Provider = window.ethereum;
         try {
             await window.ethereum.enable();
         } catch (error) {
